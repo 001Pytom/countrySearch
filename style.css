@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Montserrat";
+  width: 100vw;
+  color: #fff;
+}
+
+.globe_container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 55vh;
+  display: grid;
+  gap: 2vh;
+  place-content: center;
+  background-color: darkblue;
+}
+
+.globe_container::before {
+  content: "";
+  position: absolute;
+  background: url(images/globe-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  inset: 0;
+  opacity: 0.6;
+}
+
+header h1 {
+  font-size: 3vw;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+  isolation: isolate;
+}
+.countries_info {
+  isolation: isolate;
+}
+
+/* to display none and use js to make it shw on btn click */
+.containing {
+  display: none;
+}
+
+.letter {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+
+.number_letter {
+  color: lightgreen;
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2vw;
+  isolation: isolate;
+}
+.starting_word,
+.any_word,
+.arrow {
+  padding: 0.6rem;
+  text-transform: uppercase;
+  background-color: blueviolet;
+  border: none;
+  color: #fff;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  font-size: 0.5rem;
+  background-color: blueviolet;
+  border: none;
+  color: #fff;
+}
+
+.a-z {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: blueviolet;
+  color: #fff;
+}
+.input_container {
+  /* background-color: red; */
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.7vw;
+  isolation: isolate;
+}
+input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  text-align: center;
+}
+input:focus {
+  border: 2px solid lightskyblue;
+}
+
+/*  */
+.country_container {
+  width: 100%;
+  max-width: 80vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 1vw 3vw;
+  flex-wrap: wrap;
+  padding-top: 10vh;
+}
+
+.country_child_container {
+  position: relative;
+  width: 10vw;
+  background-color: darkblue;
+  height: 10vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.country_child_container::before {
+  content: "";
+  position: absolute;
+  background-image: url(images/map_image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  inset: 0;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 750px) {
+  .country_child_container {
+    font-size: 1.2vw;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 1vh;
+  }
+}
